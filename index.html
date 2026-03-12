@@ -575,9 +575,10 @@
   .item-category-vd { font-size:11px; font-weight:600; color:#aaa; margin-top:1px; }
   .item-desc-vd     { font-size:11px; font-weight:600; color:#999; font-style:italic; margin-top:2px; }
   .item-price-vd    { font-size:15px; font-weight:800; color:#E8231A; }
-  .vd-contact-row { display:flex; flex-wrap:wrap; gap:10px; padding:14px 16px 2px; }
-  .contact-chip { display:flex; align-items:center; gap:7px; background:#F0F6FF; border:1.5px solid rgba(21,101,192,0.15); border-radius:20px; padding:7px 13px; font-size:12px; font-weight:700; color:#1565C0; text-decoration:none; cursor:pointer; }
-  .contact-chip-icon { font-size:14px; }
+  .vd-contact-row { display:flex; flex-direction:row; gap:12px; padding:14px 16px 2px; justify-content:center; }
+  .contact-chip { display:flex; align-items:center; justify-content:center; width:52px; height:52px; background:#F0F6FF; border:1.5px solid rgba(21,101,192,0.15); border-radius:50%; text-decoration:none; cursor:pointer; flex-shrink:0; }
+  .contact-chip-icon { display:flex; align-items:center; justify-content:center; width:100%; height:100%; }
+  .contact-chip-text { display:none; }
   .vd-disclaimer { margin:8px 16px 0; padding:8px 14px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); border-radius:10px; font-size:10px; font-weight:600; color:rgba(255,255,255,0.7); text-align:center; line-height:1.4; }
   .floating-btn-wrap { position:absolute; bottom:30px; left:16px; right:16px; z-index:20; }
   .floating-btn { width:100%; padding:15px; background:#F97316; color:white; font-size:16px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:16px; cursor:pointer; text-align:center; box-shadow:0 6px 24px rgba(249,115,22,0.5); }
@@ -1311,8 +1312,8 @@
         <div class="items-header-vd">Menu Items</div>
         <div id="vd-items-list"></div>
       </div>
-      <div id="vd-contact-row" class="vd-contact-row" style="display:none;"></div>
       <div class="vd-disclaimer">Prices displayed are set by vendors. Fair Friend is not responsible for pricing discrepancies between the app and the vendor's booth.</div>
+      <div id="vd-contact-row" class="vd-contact-row" style="display:none;"></div>
     </div>
     <div class="floating-btn-wrap">
       <button class="floating-btn" onclick="openMapView(window._currentVendor)"><span style="display:inline-block;transform:rotate(-90deg);margin-right:4px;">➤</span> Show Me The Way</button>
@@ -1793,7 +1794,7 @@
     },
     {
       id:2, name:"Sweet Tooth Shoppe", premium:true,
-      description:"Handcrafted sweets and treats made fresh daily. Fudge, cotton candy, caramel apples — we've got your sweet tooth covered! Find us in the yellow striped tent near the main stage.",
+      phone:"(207) 555-0174", email:"info@sweettooththoppe.com", website:"https://sweettooththoppe.com", description:"Handcrafted sweets and treats made fresh daily. Fudge, cotton candy, caramel apples — we've got your sweet tooth covered! Find us in the yellow striped tent near the main stage.",
       photo:"https://raw.githubusercontent.com/FairFriendApp/Images/9625b5ff7d0e772ef4c761e63fbbf989433c039b/Vendor-Sample-2.png",
       thumbs:[],
       items:[
@@ -1811,7 +1812,7 @@
     },
     {
       id:3, name:"Fairground Favorites", premium:true,
-      description:"Your one-stop shop for classic fair food. Everything made fresh to order. Located near the grandstand — look for the blue and white tent!",
+      phone:"(207) 555-0211", email:"info@fairgroundfavorites.com", website:"https://fairgroundfavorites.com", description:"Your one-stop shop for classic fair food. Everything made fresh to order. Located near the grandstand — look for the blue and white tent!",
       photo:"https://raw.githubusercontent.com/FairFriendApp/Images/9625b5ff7d0e772ef4c761e63fbbf989433c039b/Vendor-Sample-3.png",
       thumbs:[],
       items:[
@@ -1831,7 +1832,7 @@
     },
     {
       id:4, name:"Johnson's Fair Foods", premium:false,
-      description:"Classic fair food done right. Find us in the food court area near the ferris wheel. Cash and card accepted.",
+      phone:"(207) 555-0248", email:"info@johnsonsfairfoods.com", website:"https://johnsonsfairfoods.com", description:"Classic fair food done right. Find us in the food court area near the ferris wheel. Cash and card accepted.",
       photo:"https://picsum.photos/seed/fairfoods/600/400",
       thumbs:[],
       items:[
@@ -1842,7 +1843,7 @@
     },
     {
       id:5, name:"Main Street Eats", premium:false,
-      description:"Serving up fair favorites at great prices. Find us on the east side of the fairgrounds near the livestock barn.",
+      phone:"(207) 555-0285", email:"info@mainstreeteats.com", website:"https://mainstreeteats.com", description:"Serving up fair favorites at great prices. Find us on the east side of the fairgrounds near the livestock barn.",
       photo:"https://picsum.photos/seed/mainstreet/600/400",
       thumbs:[],
       items:[
@@ -1853,7 +1854,7 @@
     },
     {
       id:6, name:"Pete's BBQ Pit", premium:false,
-      description:"Slow-smoked BBQ made from scratch every morning. Pulled pork, ribs, and brisket — all cooked over real hardwood. The line moves fast, so don't be shy!",
+      phone:"(207) 555-0322", email:"info@petesbbqpit.com", website:"https://petesbbqpit.com", description:"Slow-smoked BBQ made from scratch every morning. Pulled pork, ribs, and brisket — all cooked over real hardwood. The line moves fast, so don't be shy!",
       photo:"https://picsum.photos/seed/petebbq/600/400",
       thumbs:[],
       items:[
@@ -1866,7 +1867,7 @@
     // ── CLOTHING & APPAREL (5 vendors) ──────────────────────
     {
       id:7, name:"The Hat Shack", premium:true,
-      description:"Hats, caps, and western wear for the whole family. We've been outfitting fair-goers for over 20 years. Custom embroidery available on select styles!",
+      phone:"(207) 555-0359", email:"info@thehatshack.com", website:"https://thehatshack.com", description:"Hats, caps, and western wear for the whole family. We've been outfitting fair-goers for over 20 years. Custom embroidery available on select styles!",
       photo:"https://picsum.photos/seed/hatshack/600/400",
       thumbs:[],
       items:[
@@ -1880,7 +1881,7 @@
     },
     {
       id:8, name:"Fair Threads Co.", premium:true,
-      description:"Custom and souvenir apparel printed fresh at the fair. T-shirts, hoodies, and more — personalized while you wait. Great gifts for the whole family!",
+      phone:"(207) 555-0396", email:"info@fairthreadsco.com", website:"https://fairthreadsco.com", description:"Custom and souvenir apparel printed fresh at the fair. T-shirts, hoodies, and more — personalized while you wait. Great gifts for the whole family!",
       photo:"https://picsum.photos/seed/fairthreads/600/400",
       thumbs:[],
       items:[
@@ -1895,7 +1896,7 @@
     },
     {
       id:9, name:"Maine Made Woolens", premium:false,
-      description:"Locally sourced wool products made right here in Maine. Warm, durable, and beautiful — built to last through the harshest New England winters.",
+      phone:"(207) 555-0433", email:"info@mainemadewoolens.com", website:"https://mainemadewoolens.com", description:"Locally sourced wool products made right here in Maine. Warm, durable, and beautiful — built to last through the harshest New England winters.",
       photo:"https://picsum.photos/seed/mainewool/600/400",
       thumbs:[],
       items:[
@@ -1906,7 +1907,7 @@
     },
     {
       id:10, name:"Wildflower Boutique", premium:false,
-      description:"Boho-inspired women's clothing and accessories. Find flowing dresses, sun hats, and handmade jewelry all in one spot. New arrivals every season!",
+      phone:"(207) 555-0470", email:"info@wildflowerboutique.com", website:"https://wildflowerboutique.com", description:"Boho-inspired women's clothing and accessories. Find flowing dresses, sun hats, and handmade jewelry all in one spot. New arrivals every season!",
       photo:"https://picsum.photos/seed/wildflower/600/400",
       thumbs:[],
       items:[
@@ -1917,7 +1918,7 @@
     },
     {
       id:11, name:"Patriot Pride Apparel", premium:false,
-      description:"American-made clothing with pride. Flags, eagles, and red-white-and-blue everything. Perfect for the fair, the 4th, or any day you want to show your pride.",
+      phone:"(207) 555-0507", email:"info@patriotprideapparel.com", website:"https://patriotprideapparel.com", description:"American-made clothing with pride. Flags, eagles, and red-white-and-blue everything. Perfect for the fair, the 4th, or any day you want to show your pride.",
       photo:"https://picsum.photos/seed/patriotpride/600/400",
       thumbs:[],
       items:[
@@ -1930,7 +1931,7 @@
     // ── ARTS & CRAFTS (5 vendors) ────────────────────────────
     {
       id:12, name:"Crafts by Carol", premium:true,
-      description:"Handmade jewelry, quilts, and home decor made with love. All items are one-of-a-kind. Come say hi to Carol and her daughter Emma — they do everything by hand!",
+      phone:"(207) 555-0544", email:"info@craftsbycarol.com", website:"https://craftsbycarol.com", description:"Handmade jewelry, quilts, and home decor made with love. All items are one-of-a-kind. Come say hi to Carol and her daughter Emma — they do everything by hand!",
       photo:"https://picsum.photos/seed/craftscarol/600/400",
       thumbs:[],
       items:[
@@ -1945,7 +1946,7 @@
     },
     {
       id:13, name:"Rustic River Pottery", premium:true,
-      description:"Hand-thrown and hand-painted pottery made in our Maine studio. Each piece is unique — from coffee mugs to serving bowls, everything is functional and beautiful.",
+      phone:"(207) 555-0581", email:"info@rusticriverpottery.com", website:"https://rusticriverpottery.com", description:"Hand-thrown and hand-painted pottery made in our Maine studio. Each piece is unique — from coffee mugs to serving bowls, everything is functional and beautiful.",
       photo:"https://picsum.photos/seed/rustpottery/600/400",
       thumbs:[],
       items:[
@@ -1959,7 +1960,7 @@
     },
     {
       id:14, name:"The Painted Barn", premium:false,
-      description:"Folk art, signs, and painted wood decor. Everything in our booth is made in our barn studio just 10 miles from here. Custom orders welcome!",
+      phone:"(207) 555-0618", email:"info@thepaintedbarn.com", website:"https://thepaintedbarn.com", description:"Folk art, signs, and painted wood decor. Everything in our booth is made in our barn studio just 10 miles from here. Custom orders welcome!",
       photo:"https://picsum.photos/seed/paintedbarn/600/400",
       thumbs:[],
       items:[
@@ -1970,7 +1971,7 @@
     },
     {
       id:15, name:"Silver Fox Jewelry", premium:false,
-      description:"Sterling silver and gemstone jewelry handcrafted in-house. We source ethical stones and recycle silver. Every piece comes with a certificate of authenticity.",
+      phone:"(207) 555-0655", email:"info@silverfoxjewelry.com", website:"https://silverfoxjewelry.com", description:"Sterling silver and gemstone jewelry handcrafted in-house. We source ethical stones and recycle silver. Every piece comes with a certificate of authenticity.",
       photo:"https://picsum.photos/seed/silverfox/600/400",
       thumbs:[],
       items:[
@@ -1981,7 +1982,7 @@
     },
     {
       id:16, name:"Woodsy Creations", premium:false,
-      description:"Hand-carved and laser-engraved wood products. From cutting boards to keychains, we put the care into every piece. Local Maine wood whenever possible.",
+      phone:"(207) 555-0692", email:"info@woodsycreations.com", website:"https://woodsycreations.com", description:"Hand-carved and laser-engraved wood products. From cutting boards to keychains, we put the care into every piece. Local Maine wood whenever possible.",
       photo:"https://picsum.photos/seed/woodsycreate/600/400",
       thumbs:[],
       items:[
@@ -1994,7 +1995,7 @@
     // ── TOYS & GAMES (5 vendors) ─────────────────────────────
     {
       id:17, name:"Kid Zone Carnival Games", premium:true,
-      description:"Classic carnival games and prizes for kids of all ages! Ring toss, balloon darts, duck pond, and more. Everyone's a winner at Kid Zone — no skill required for the littles!",
+      phone:"(207) 555-0729", email:"info@kidzonecarnival.com", website:"https://kidzonecarnival.com", description:"Classic carnival games and prizes for kids of all ages! Ring toss, balloon darts, duck pond, and more. Everyone's a winner at Kid Zone — no skill required for the littles!",
       photo:"https://picsum.photos/seed/kidzone/600/400",
       thumbs:[],
       items:[
@@ -2009,7 +2010,7 @@
     },
     {
       id:18, name:"Galaxy Toys & Collectibles", premium:true,
-      description:"New and collectible toys, action figures, and trading cards. We travel to fairs and expos all season bringing rare finds and popular items. Always rotating inventory!",
+      phone:"(207) 555-0766", email:"info@galaxytoys.com", website:"https://galaxytoys.com", description:"New and collectible toys, action figures, and trading cards. We travel to fairs and expos all season bringing rare finds and popular items. Always rotating inventory!",
       photo:"https://picsum.photos/seed/galaxytoys/600/400",
       thumbs:[],
       items:[
@@ -2024,7 +2025,7 @@
     },
     {
       id:19, name:"Backyard Games Co.", premium:false,
-      description:"Oversized lawn games perfect for families. Cornhole, ladder toss, ring games — all built tough and ready to play. Great as gifts or fair fun!",
+      phone:"(207) 555-0803", email:"info@backyardgamesco.com", website:"https://backyardgamesco.com", description:"Oversized lawn games perfect for families. Cornhole, ladder toss, ring games — all built tough and ready to play. Great as gifts or fair fun!",
       photo:"https://picsum.photos/seed/backyardgames/600/400",
       thumbs:[],
       items:[
@@ -2035,7 +2036,7 @@
     },
     {
       id:20, name:"Pop-A-Shot Alley", premium:false,
-      description:"Basketball shooting games and skill challenges for all ages. Win tickets redeemable for prizes at our prize counter. Competitive scoring for the whole family!",
+      phone:"(207) 555-0840", email:"info@popashot.com", website:"https://popashot.com", description:"Basketball shooting games and skill challenges for all ages. Win tickets redeemable for prizes at our prize counter. Competitive scoring for the whole family!",
       photo:"https://picsum.photos/seed/popashot/600/400",
       thumbs:[],
       items:[
@@ -2046,7 +2047,7 @@
     },
     {
       id:21, name:"Retro Toy Barn", premium:false,
-      description:"Vintage and retro toys from decades past. Wind-ups, tin toys, classic board games — the stuff your parents played with. New old stock and fully restored pieces.",
+      phone:"(207) 555-0877", email:"info@retrotoybarn.com", website:"https://retrotoybarn.com", description:"Vintage and retro toys from decades past. Wind-ups, tin toys, classic board games — the stuff your parents played with. New old stock and fully restored pieces.",
       photo:"https://picsum.photos/seed/retrotoy/600/400",
       thumbs:[],
       items:[
@@ -2059,7 +2060,7 @@
     // ── HOME & GARDEN (5 vendors) ────────────────────────────
     {
       id:22, name:"Green Thumb Gardens", premium:true,
-      description:"Fresh plants, herbs, and garden supplies from our family farm in Bridgton, ME. We grow everything we sell. Take home a little bit of the farm with you!",
+      phone:"(207) 555-0914", email:"info@greenthumbgardens.com", website:"https://greenthumbgardens.com", description:"Fresh plants, herbs, and garden supplies from our family farm in Bridgton, ME. We grow everything we sell. Take home a little bit of the farm with you!",
       photo:"https://picsum.photos/seed/greenthumb/600/400",
       thumbs:[],
       items:[
@@ -2074,7 +2075,7 @@
     },
     {
       id:23, name:"Rustic Roots Home Decor", premium:true,
-      description:"Farmhouse and rustic home decor handmade in Maine. Wreaths, garlands, driftwood art, and more. Everything in our booth is made locally and built to last.",
+      phone:"(207) 555-0951", email:"info@rusticrootsdecor.com", website:"https://rusticrootsdecor.com", description:"Farmhouse and rustic home decor handmade in Maine. Wreaths, garlands, driftwood art, and more. Everything in our booth is made locally and built to last.",
       photo:"https://picsum.photos/seed/rusticroots/600/400",
       thumbs:[],
       items:[
@@ -2089,7 +2090,7 @@
     },
     {
       id:24, name:"Cedar Creek Furniture", premium:false,
-      description:"Solid hardwood furniture and garden benches. Custom orders accepted. All pieces are mortise-and-tenon joinery — no nails, no staples, built to last a lifetime.",
+      phone:"(207) 555-0988", email:"info@cedarcreekfurniture.com", website:"https://cedarcreekfurniture.com", description:"Solid hardwood furniture and garden benches. Custom orders accepted. All pieces are mortise-and-tenon joinery — no nails, no staples, built to last a lifetime.",
       photo:"https://picsum.photos/seed/cedarcreek/600/400",
       thumbs:[],
       items:[
@@ -2100,7 +2101,7 @@
     },
     {
       id:25, name:"Maine Honey & Maple", premium:false,
-      description:"Raw local honey and pure Maine maple syrup from our family operation. Wildcrafted and sustainable. Bees and maple trees have been in the family for 4 generations.",
+      phone:"(207) 555-0125", email:"info@mainehoneymaple.com", website:"https://mainehoneymaple.com", description:"Raw local honey and pure Maine maple syrup from our family operation. Wildcrafted and sustainable. Bees and maple trees have been in the family for 4 generations.",
       photo:"https://picsum.photos/seed/mainehoney/600/400",
       thumbs:[],
       items:[
@@ -2111,7 +2112,7 @@
     },
     {
       id:26, name:"Stoneworks by Sam", premium:false,
-      description:"Hand-crafted stone garden art and functional pieces. Birdbaths, stepping stones, garden markers — everything is cast in Portland cement and hand-painted.",
+      phone:"(207) 555-0162", email:"info@stoneworksbysam.com", website:"https://stoneworksbysam.com", description:"Hand-crafted stone garden art and functional pieces. Birdbaths, stepping stones, garden markers — everything is cast in Portland cement and hand-painted.",
       photo:"https://picsum.photos/seed/stoneworks/600/400",
       thumbs:[],
       items:[
@@ -2124,7 +2125,7 @@
     // ── HEALTH & BEAUTY (5 vendors) ──────────────────────────
     {
       id:27, name:"Lavender Lane Apothecary", premium:true,
-      description:"Natural and organic skincare made in small batches in Portland, ME. No synthetic fragrances, no parabens — just clean ingredients that actually work. Free samples always available!",
+      phone:"(207) 555-0199", email:"info@lavenderlaneapo.com", website:"https://lavenderlaneapo.com", description:"Natural and organic skincare made in small batches in Portland, ME. No synthetic fragrances, no parabens — just clean ingredients that actually work. Free samples always available!",
       photo:"https://picsum.photos/seed/lavender/600/400",
       thumbs:[],
       items:[
@@ -2139,7 +2140,7 @@
     },
     {
       id:28, name:"Suds & Such Soap Co.", premium:true,
-      description:"Handmade cold-process soaps and bath bombs. Every bar is scented with essential oils and colored with natural botanicals. Over 30 varieties at the fair this year!",
+      phone:"(207) 555-0236", email:"info@sudssuchsoap.com", website:"https://sudssuchsoap.com", description:"Handmade cold-process soaps and bath bombs. Every bar is scented with essential oils and colored with natural botanicals. Over 30 varieties at the fair this year!",
       photo:"https://picsum.photos/seed/sudssoap/600/400",
       thumbs:[],
       items:[
@@ -2153,7 +2154,7 @@
     },
     {
       id:29, name:"Essential Wellness", premium:false,
-      description:"Aromatherapy, essential oils, and wellness products for mind and body. We blend our own roller bottles and diffuser mixes. Come smell before you buy!",
+      phone:"(207) 555-0273", email:"info@essentialwellness.com", website:"https://essentialwellness.com", description:"Aromatherapy, essential oils, and wellness products for mind and body. We blend our own roller bottles and diffuser mixes. Come smell before you buy!",
       photo:"https://picsum.photos/seed/essential/600/400",
       thumbs:[],
       items:[
@@ -2164,7 +2165,7 @@
     },
     {
       id:30, name:"Glow Up Beauty Bar", premium:false,
-      description:"On-site beauty services and products. Get a braid, touch-up your nails, or browse our curated collection of indie beauty brands. Walk-ins welcome!",
+      phone:"(207) 555-0310", email:"info@glowupbeauty.com", website:"https://glowupbeauty.com", description:"On-site beauty services and products. Get a braid, touch-up your nails, or browse our curated collection of indie beauty brands. Walk-ins welcome!",
       photo:"https://picsum.photos/seed/glowup/600/400",
       thumbs:[],
       items:[
@@ -2175,7 +2176,7 @@
     },
     {
       id:31, name:"Sunstone Crystals", premium:false,
-      description:"Healing crystals, gemstones, and metaphysical goods. Whether you're a collector or just curious, we have something for every energy. All crystals ethically sourced.",
+      phone:"(207) 555-0347", email:"info@sunsonecrystals.com", website:"https://sunsonecrystals.com", description:"Healing crystals, gemstones, and metaphysical goods. Whether you're a collector or just curious, we have something for every energy. All crystals ethically sourced.",
       photo:"https://picsum.photos/seed/sunstone/600/400",
       thumbs:[],
       items:[
@@ -2188,7 +2189,7 @@
     // ── SPORTS & OUTDOORS (5 vendors) ────────────────────────
     {
       id:32, name:"Maine Outdoor Outfitters", premium:true,
-      description:"Gear for hiking, fishing, camping, and everything in between. We carry brand-name and Maine-made equipment. Our staff are all avid outdoors people — ask us anything!",
+      phone:"(207) 555-0384", email:"info@maineoutdooroutfitters.com", website:"https://maineoutdooroutfitters.com", description:"Gear for hiking, fishing, camping, and everything in between. We carry brand-name and Maine-made equipment. Our staff are all avid outdoors people — ask us anything!",
       photo:"https://picsum.photos/seed/maineoutdoor/600/400",
       thumbs:[],
       items:[
@@ -2204,7 +2205,7 @@
     },
     {
       id:33, name:"Cast & Reel Fishing Co.", premium:true,
-      description:"Everything for the New England angler. Fresh and saltwater tackle, handmade lures, and expert advice. We've been fishing Maine waters for 30 years.",
+      phone:"(207) 555-0421", email:"info@castandreel.com", website:"https://castandreel.com", description:"Everything for the New England angler. Fresh and saltwater tackle, handmade lures, and expert advice. We've been fishing Maine waters for 30 years.",
       photo:"https://picsum.photos/seed/castreel/600/400",
       thumbs:[],
       items:[
@@ -2218,7 +2219,7 @@
     },
     {
       id:34, name:"Peak Performance Athletics", premium:false,
-      description:"Sports equipment, fitness gear, and athletic accessories. Whether you're a weekend warrior or a serious athlete, we carry products that perform at every level.",
+      phone:"(207) 555-0458", email:"info@peakperformance.com", website:"https://peakperformance.com", description:"Sports equipment, fitness gear, and athletic accessories. Whether you're a weekend warrior or a serious athlete, we carry products that perform at every level.",
       photo:"https://picsum.photos/seed/peakperform/600/400",
       thumbs:[],
       items:[
@@ -2229,7 +2230,7 @@
     },
     {
       id:35, name:"Trail Blazer Bikes", premium:false,
-      description:"New and used bicycles plus accessories. All bikes are serviced and road-ready before hitting the floor. Ask about our layaway program for new bikes!",
+      phone:"(207) 555-0495", email:"info@trailblazerbikes.com", website:"https://trailblazerbikes.com", description:"New and used bicycles plus accessories. All bikes are serviced and road-ready before hitting the floor. Ask about our layaway program for new bikes!",
       photo:"https://picsum.photos/seed/trailblazer/600/400",
       thumbs:[],
       items:[
@@ -2240,7 +2241,7 @@
     },
     {
       id:36, name:"Archery Alley", premium:false,
-      description:"Traditional and modern archery equipment plus an on-site shooting lane. Try before you buy! Beginners and experienced archers both welcome. Safety gear provided.",
+      phone:"(207) 555-0532", email:"info@archeryalley.com", website:"https://archeryalley.com", description:"Traditional and modern archery equipment plus an on-site shooting lane. Try before you buy! Beginners and experienced archers both welcome. Safety gear provided.",
       photo:"https://picsum.photos/seed/archery/600/400",
       thumbs:[],
       items:[
@@ -2253,7 +2254,7 @@
     // ── OTHER (5 vendors) ────────────────────────────────────
     {
       id:37, name:"Bella Vista Photography", premium:true,
-      description:"Professional on-site portrait photography with same-day digital delivery. Family photos, couples, pets welcome! Fun props and backdrops available. Book your session at the booth.",
+      phone:"(207) 555-0569", email:"info@bellavistaphoto.com", website:"https://bellavistaphoto.com", description:"Professional on-site portrait photography with same-day digital delivery. Family photos, couples, pets welcome! Fun props and backdrops available. Book your session at the booth.",
       photo:"https://picsum.photos/seed/bellavista/600/400",
       thumbs:[],
       items:[
@@ -2267,7 +2268,7 @@
     },
     {
       id:38, name:"Lucky Paws Pet Supplies", premium:true,
-      description:"Premium pet food, treats, accessories, and gear for dogs, cats, and small animals. All-natural and grain-free options available. Bring your dog — samples at the booth!",
+      phone:"(207) 555-0606", email:"info@luckypaws.com", website:"https://luckypaws.com", description:"Premium pet food, treats, accessories, and gear for dogs, cats, and small animals. All-natural and grain-free options available. Bring your dog — samples at the booth!",
       photo:"https://picsum.photos/seed/luckypaws/600/400",
       thumbs:[],
       items:[
@@ -2280,7 +2281,7 @@
     },
     {
       id:39, name:"Maple Street Books & Maps", premium:false,
-      description:"New and vintage books, local maps, and New England travel guides. We specialize in Maine history, nature, and field guides. Great for kids and adults alike.",
+      phone:"(207) 555-0643", email:"info@maplestreetbooks.com", website:"https://maplestreetbooks.com", description:"New and vintage books, local maps, and New England travel guides. We specialize in Maine history, nature, and field guides. Great for kids and adults alike.",
       photo:"https://picsum.photos/seed/maplebooks/600/400",
       thumbs:[],
       items:[
@@ -2291,7 +2292,7 @@
     },
     {
       id:40, name:"Fryeburg Fair Souvenirs", premium:false,
-      description:"Official and unofficial Fryeburg Fair keepsakes and collectibles. Mugs, magnets, posters, pins — if it has the fair on it, we probably have it. Great for first-timers and regulars alike!",
+      phone:"(207) 555-0680", email:"info@fryeburgfairsouvenirs.com", website:"https://fryeburgfairsouvenirs.com", description:"Official and unofficial Fryeburg Fair keepsakes and collectibles. Mugs, magnets, posters, pins — if it has the fair on it, we probably have it. Great for first-timers and regulars alike!",
       photo:"https://picsum.photos/seed/fryeburgsouvenir/600/400",
       thumbs:[],
       items:[
@@ -2302,7 +2303,7 @@
     },
     {
       id:41, name:"Vermont Knife & Tool", premium:false,
-      description:"Quality knives, multi-tools, and outdoor blades. All items are demonstration-tested at the booth. We sharpen knives on-site — bring your dull ones and leave happy!",
+      phone:"(207) 555-0717", email:"info@vermontknifetool.com", website:"https://vermontknifetool.com", description:"Quality knives, multi-tools, and outdoor blades. All items are demonstration-tested at the booth. We sharpen knives on-site — bring your dull ones and leave happy!",
       photo:"https://picsum.photos/seed/vermontknife/600/400",
       thumbs:[],
       items:[
@@ -2314,7 +2315,7 @@
     // ── ADDITIONAL FOOD & BEVERAGE (5 vendors) ───────────────────────────────
     {
       id:42, name:"Maine Apple Barn", premium:true,
-      description:"We've been pressing cider and selling Maine's finest apples at the Fryeburg Fair for over 30 years. Come try our fresh-pressed cider donuts — made right here at the booth every morning. The smell alone is worth the trip!",
+      phone:"(207) 555-0754", email:"info@maineapplebarn.com", website:"https://maineapplebarn.com", description:"We've been pressing cider and selling Maine's finest apples at the Fryeburg Fair for over 30 years. Come try our fresh-pressed cider donuts — made right here at the booth every morning. The smell alone is worth the trip!",
       photo:"https://picsum.photos/seed/maineapplebarn/600/400",
       thumbs:[],
       items:[
@@ -2327,7 +2328,7 @@
     },
     {
       id:43, name:"Kettle King", premium:true,
-      description:"Kettle King has been a Fryeburg Fair staple since 2003. Our giant copper kettles churn out the freshest kettle corn and roasted nuts on the fairgrounds. The sweet-and-salty smell draws a crowd every single year.",
+      phone:"(207) 555-0791", email:"info@kettleking.com", website:"https://kettleking.com", description:"Kettle King has been a Fryeburg Fair staple since 2003. Our giant copper kettles churn out the freshest kettle corn and roasted nuts on the fairgrounds. The sweet-and-salty smell draws a crowd every single year.",
       photo:"https://picsum.photos/seed/kettleking/600/400",
       thumbs:[],
       items:[
@@ -2340,7 +2341,7 @@
     },
     {
       id:44, name:"River Bend Pizza", premium:true,
-      description:"Wood-fired pizza made fresh to order at the fair. River Bend uses local Maine ingredients wherever possible — our sauce is made from Maine-grown tomatoes. Slices or whole pies, eat-in or walk-and-eat!",
+      phone:"(207) 555-0828", email:"info@riverbendpizza.com", website:"https://riverbendpizza.com", description:"Wood-fired pizza made fresh to order at the fair. River Bend uses local Maine ingredients wherever possible — our sauce is made from Maine-grown tomatoes. Slices or whole pies, eat-in or walk-and-eat!",
       photo:"https://picsum.photos/seed/riverbendbizza/600/400",
       thumbs:[],
       items:[
@@ -2353,7 +2354,7 @@
     },
     {
       id:45, name:"The Cider House", premium:false,
-      description:"Cold cider, local brews, and hearty sandwiches. Find us near the livestock barn.",
+      phone:"(207) 555-0865", email:"info@theciderhouse.com", website:"https://theciderhouse.com", description:"Cold cider, local brews, and hearty sandwiches. Find us near the livestock barn.",
       photo:"https://picsum.photos/seed/ciderhouse/600/400",
       thumbs:[],
       items:[
@@ -2364,7 +2365,7 @@
     },
     {
       id:46, name:"Fryeburg Fry Co.", premium:false,
-      description:"Fries, dogs, and fair classics at honest prices. A Fryeburg Fair tradition since 2011.",
+      phone:"(207) 555-0902", email:"info@fryeburgfryco.com", website:"https://fryeburgfryco.com", description:"Fries, dogs, and fair classics at honest prices. A Fryeburg Fair tradition since 2011.",
       photo:"https://picsum.photos/seed/fryeburgfryco/600/400",
       thumbs:[],
       items:[
@@ -2857,9 +2858,12 @@
     // Contact info row
     const cr = document.getElementById('vd-contact-row');
     const chips = [];
-    if (vendor.phone)     chips.push(`<a class="contact-chip" href="tel:${vendor.phone}"><span class="contact-chip-icon">📞</span>${vendor.phone}</a>`);
-    if (vendor.email)     chips.push(`<a class="contact-chip" href="mailto:${vendor.email}"><span class="contact-chip-icon">✉️</span>${vendor.email}</a>`);
-    if (vendor.website)   chips.push(`<a class="contact-chip" href="${vendor.website}" target="_blank"><span class="contact-chip-icon">🌐</span>Website</a>`);
+    const phoneIcon = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1L6.6 10.8z"/></svg>`;
+    const emailIcon = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>`;
+    const webIcon   = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>`;
+    if (vendor.phone)     chips.push(`<a class="contact-chip" href="tel:${vendor.phone}"><span class="contact-chip-icon">${phoneIcon}</span><span class="contact-chip-text">${vendor.phone}</span></a>`);
+    if (vendor.email)     chips.push(`<a class="contact-chip" href="mailto:${vendor.email}"><span class="contact-chip-icon">${emailIcon}</span><span class="contact-chip-text">${vendor.email}</span></a>`);
+    if (vendor.website)   chips.push(`<a class="contact-chip" href="${vendor.website}" target="_blank"><span class="contact-chip-icon">${webIcon}</span><span class="contact-chip-text">${vendor.website}</span></a>`);
 
     if (chips.length > 0) { cr.innerHTML = chips.join(''); cr.style.display = 'flex'; }
     else { cr.innerHTML = ''; cr.style.display = 'none'; }
