@@ -779,6 +779,167 @@
   .vendor-ph .ph-icon  { font-size:30px; }
   .vendor-ph .ph-line1 { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; }
   .vendor-ph .ph-line2 { font-size:10px; font-weight:600; opacity:0.8; }
+
+  /* ============================================================
+     PROFILE SELECTOR SCREEN
+  ============================================================ */
+  .profile-card {
+    background: rgba(255,255,255,0.97);
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    cursor: pointer;
+  }
+  .profile-card.add-profile {
+    background: rgba(255,255,255,0.15);
+    border: 1.5px dashed rgba(255,255,255,0.5);
+    box-shadow: none;
+  }
+  .profile-card-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+  .profile-avatar {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #1565C0, #42A5F5);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .add-avatar {
+    background: rgba(255,255,255,0.2);
+    color: #1565C0;
+    font-size: 28px;
+    font-weight: 300;
+  }
+  .profile-card-info { flex: 1; min-width: 0; }
+  .profile-card-name { font-size: 14px; font-weight: 800; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .profile-card-event { font-size: 12px; color: #666; font-weight: 600; margin-top: 2px; }
+  .profile-card-status { display: inline-block; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 20px; margin-top: 4px; }
+  .profile-card-status.premium { background: rgba(249,115,22,0.12); color: #F97316; }
+  .profile-card-status.basic { background: rgba(21,101,192,0.1); color: #1565C0; }
+  .profile-card-arrow { font-size: 22px; color: #bbb; font-weight: 300; flex-shrink: 0; padding-left: 8px; }
+
+  /* ============================================================
+     APPLY TO EVENT SCREEN
+  ============================================================ */
+  .event-apply-card {
+    background: rgba(255,255,255,0.97);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    cursor: pointer;
+  }
+  .event-apply-card.upcoming { opacity: 0.7; cursor: default; }
+  .event-apply-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .event-apply-badge { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .event-apply-badge.open { background: rgba(34,197,94,0.15); color: #16a34a; }
+  .event-apply-badge.upcoming-badge { background: rgba(100,116,139,0.15); color: #64748b; }
+  .event-apply-deadline { font-size: 11px; color: #888; font-weight: 700; }
+  .event-apply-name { font-size: 17px; font-weight: 800; color: #1a1a2e; margin-bottom: 4px; }
+  .event-apply-meta { font-size: 12px; color: #666; font-weight: 600; margin-bottom: 8px; }
+  .event-apply-desc { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 12px; }
+  .event-apply-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid #eee; }
+  .event-apply-fee { font-size: 12px; color: #666; font-weight: 700; }
+  .event-apply-cta { font-size: 14px; font-weight: 800; color: #F97316; }
+
+
+  /* ── WIDE SUBSCRIPTION CARD (full-width, above grid) ── */
+  /* ── SUBSCRIPTION ENTRY CARD (full-width, compact) ── */
+  .sub-entry-card {
+    border-radius: 16px;
+    padding: 13px 16px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.28);
+  }
+  .sub-entry-card.premium {
+    background: rgba(255,255,255,0.97);
+    border: none;
+  }
+  .sub-entry-card.premium .sub-entry-label { color: rgba(21,101,192,0.7); }
+  .sub-entry-card.premium .sub-entry-name  { color: #B8860B; }
+  .sub-entry-card.premium .sub-entry-event { color: rgba(0,0,0,0.5); }
+  .sub-entry-card.premium .sub-entry-arrow { color: rgba(0,0,0,0.25); }
+  .sub-entry-card.basic {
+    background: rgba(255,255,255,0.97);
+    border: none;
+  }
+  .sub-entry-card.basic .sub-entry-label { color: rgba(249,115,22,0.7); }
+  .sub-entry-card.basic .sub-entry-name.basic-name { color: #F97316; }
+  .sub-entry-card.basic .sub-entry-event { color: rgba(0,0,0,0.5); }
+  .sub-entry-card.basic .sub-entry-arrow { color: rgba(249,115,22,0.4); }
+  .sub-entry-left { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+  .sub-entry-label { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .sub-entry-name  { font-size: 15px; font-weight: 800; }
+  .sub-entry-name.basic-name { color: #F97316; }
+  .sub-entry-event { font-size: 11px; font-weight: 600; margin-top: 1px; }
+  .sub-entry-arrow { font-size: 22px; font-weight: 300; flex-shrink: 0; }
+
+
+  /* ── DASHBOARD FIXED FOOTER ── */
+  .dash-fixed-footer {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(15,40,90,0.95) 28%);
+    padding: 8px 16px 28px;
+    display: flex; gap: 10px; z-index: 50;
+  }
+  .dash-footer-btn {
+    flex: 1; padding: 13px 8px;
+    background: #1565C0;
+    border: none;
+    color: white; font-size: 14px; font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 14px; cursor: pointer; text-align: center;
+    box-shadow: 0 4px 14px rgba(21,101,192,0.4);
+  }
+  .dash-footer-btn.logout {
+    background: #F97316;
+    box-shadow: 0 4px 14px rgba(249,115,22,0.4);
+    color: white;
+  }
+
+  /* ── FEATURED UPSELL BANNER ── */
+  .featured-banner {
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    background: rgba(255,255,255,0.97);
+    border: none;
+    display: flex; align-items: center; gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.28);
+  }
+  .featured-banner-icon { font-size: 28px; flex-shrink: 0; }
+  .featured-banner-body { flex: 1; min-width: 0; }
+  .featured-banner-label { font-size: 10px; font-weight: 800; color: rgba(168,85,247,0.8); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; }
+  .featured-banner-title { font-size: 15px; font-weight: 800; color: #1a1a2e; margin-bottom: 2px; }
+  .featured-banner-sub { font-size: 11px; font-weight: 600; color: rgba(0,0,0,0.5); line-height: 1.4; }
+  .featured-banner-arrow { font-size: 22px; color: rgba(0,0,0,0.2); flex-shrink: 0; }
+
+  /* ── FEATURED INQUIRY SCREEN ── */
+  .featured-hero {
+    background: rgba(255,255,255,0.97);
+    border: none;
+    border-radius: 18px; padding: 20px 18px; margin-bottom: 14px; text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  }
+  .featured-hero-icon { font-size: 40px; margin-bottom: 10px; }
+  .featured-hero-title { font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 6px; }
+  .featured-hero-sub { font-size: 13px; font-weight: 600; color: rgba(0,0,0,0.55); line-height: 1.5; }
+  .featured-perks { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .featured-perk-row { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.97); border-radius: 12px; padding: 11px 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.12); }
+  .featured-perk-icon { font-size: 18px; flex-shrink: 0; }
+  .featured-perk-text { font-size: 14px; font-weight: 700; color: #1a1a2e; }
+  .featured-note { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 14px; line-height: 1.6; }
+
 </style>
 </head>
 <body>
@@ -882,7 +1043,7 @@
     </div>
     <div class="vl-welcome">
       <h1>Vendor Login</h1>
-      <p>Please sign in or register to manage your listing.</p>
+      <p>Please sign in or register to manage your account.</p>
     </div>
     <div class="form-scroll">
       <div class="login-card">
@@ -895,24 +1056,11 @@
           <input type="password" placeholder="Enter your password">
         </div>
         <div class="forgot-link"><a href="#" onclick="event.preventDefault();navigate('screen-forgot-password')">Forgot your password?</a></div>
-        <button class="blue-btn" style="margin-bottom:0;" onclick="navigate('screen-dashboard')">Sign In</button>
+        <button class="blue-btn" style="margin-bottom:0;" onclick="navigate('screen-account-landing')">Sign In</button>
         <div class="or-divider"><div class="or-line"></div><div class="or-text">NEW VENDOR?</div><div class="or-line"></div></div>
         <button class="register-btn" onclick="navigate('screen-vendor-reg')">Create a Vendor Account</button>
       </div>
-      <div class="status-card">
-        <div class="status-icon">⏳</div>
-        <div>
-          <div class="status-title">Account Pending Approval?</div>
-          <div class="status-desc">After registering, your account will be reviewed by our team. You'll receive an email once your account has been approved.</div>
-        </div>
-      </div>
-      <div class="status-card" style="border-color:rgba(232,35,26,0.4);background:rgba(232,35,26,0.1);">
-        <div class="status-icon">📧</div>
-        <div>
-          <div class="status-title">Account Rejected?</div>
-          <div class="status-desc">If your application was rejected you will receive an email with the reason. You may correct your information and resubmit.</div>
-        </div>
-      </div>
+
     </div>
     <div class="bottom-bar"><div class="home-indicator"></div></div>
   </div>
@@ -1041,7 +1189,7 @@
           <div class="terms-text">I agree to the <a href="#">Terms &amp; Conditions</a> and understand that Fair Friend is not responsible for pricing discrepancies between the app and my booth.</div>
         </div>
       </div>
-      <button class="orange-btn" onclick="navigate('screen-vendor-login')">Create My Vendor Account</button>
+      <button class="orange-btn" onclick="navigate('screen-account-landing-new')">Create My Vendor Account</button>
       <div class="login-link">Already have an account? <a onclick="navigate('screen-vendor-login')">Log In</a></div>
     </div>
     <div class="bottom-bar"><div class="home-indicator"></div></div>
@@ -1057,21 +1205,52 @@
     </div>
     <div class="greeting">
       <div class="greeting-name">Uncle Bob's Fryer Shack</div>
-      <div class="greeting-status"><div class="status-dot"></div> Account Approved</div>
+      <div class="greeting-status"><div class="status-dot"></div> Event Approved — Fryeburg Fair 2026</div>
     </div>
     <div class="scroll-content" style="padding:0 16px 16px;">
-      <div class="listing-card-prem">
-        <div>
-          <div class="listing-type-label">Current Listing</div>
-          <div class="listing-type-name">⭐ Premium Listing</div>
-          <div class="premium-expires">Active — Fryeburg Fair 2026</div>
+
+      <!-- Featured CTA — top of dashboard -->
+      <div class="featured-banner" onclick="navigate('screen-featured')">
+        <div class="featured-banner-icon">🌟</div>
+        <div class="featured-banner-body">
+          <div class="featured-banner-label">Limited Availability</div>
+          <div class="featured-banner-title">Get Featured at This Event</div>
+          <div class="featured-banner-sub">Top of the Customer Search screen · Per-day listing · Contact us to book</div>
         </div>
+        <div class="featured-banner-arrow">›</div>
       </div>
+
+      <!-- Merged status + subscription card -->
+      <div class="sub-entry-card premium" onclick="navigate('screen-subscription')">
+        <div class="sub-entry-left">
+          <div class="sub-entry-label">Current Listing · Fryeburg Fair 2026</div>
+          <div class="sub-entry-name">⭐ Premium — Active</div>
+          <div class="sub-entry-event">Manage plan · View benefits · Billing</div>
+        </div>
+        <div class="sub-entry-arrow">›</div>
+      </div>
+
+      <!-- 2×3 Menu Grid -->
       <div class="menu-grid">
         <div class="menu-item" onclick="navigate('screen-manage-profile')">
           <div class="menu-item-icon">👤</div>
-          <div class="menu-item-title">Manage Profile</div>
+          <div class="menu-item-title">Manage Business</div>
           <div class="menu-item-sub">Name, description, contact</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-update-password')">
+          <div class="menu-item-icon">🔒</div>
+          <div class="menu-item-title">Update Password</div>
+          <div class="menu-item-sub">Change your password</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-vendor-state')">
+          <div class="menu-item-icon">🎪</div>
+          <div class="menu-item-title">Apply to Event</div>
+          <div class="menu-item-sub">Browse open events</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-manage-location')">
+          <div class="menu-item-icon">📍</div>
+          <div class="menu-item-title">Manage Location</div>
+          <div class="menu-item-sub">Pin your spot on the map</div>
         </div>
         <div class="menu-item" onclick="navigate('screen-manage-photos')">
           <div class="menu-item-icon">📷</div>
@@ -1083,27 +1262,94 @@
           <div class="menu-item-title">Manage Items</div>
           <div class="menu-item-sub">Unlimited items</div>
         </div>
-        <div class="menu-item" onclick="navigate('screen-manage-location')">
-          <div class="menu-item-icon">📍</div>
-          <div class="menu-item-title">Manage Location</div>
-          <div class="menu-item-sub">Pin your spot on the map</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-update-password')">
-          <div class="menu-item-icon">🔒</div>
-          <div class="menu-item-title">Update Password</div>
-          <div class="menu-item-sub">Change your password</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-subscription')">
-          <div class="menu-item-icon">⭐</div>
-          <div class="menu-item-title">Subscription</div>
-          <div class="menu-item-sub">Premium listing plans</div>
-        </div>
       </div>
+
       <div class="lock-notice-dash">
         <span style="font-size:18px;flex-shrink:0;">⏰</span>
         <div class="lock-notice-dash-text">Items lock 24 hours before the event starts. Make sure your menu and pricing are up to date before then!</div>
       </div>
-      <button class="logout-btn" onclick="navigate('screen-account-type')">Log Out</button>
+      <div style="height:70px;"></div><!-- spacer for fixed footer -->
+    </div>
+    <!-- Fixed footer -->
+    <div class="dash-fixed-footer">
+      <button class="blue-btn" style="flex:1;margin:0 4px 0 0;" onclick="navigate('screen-account-landing')">My Account</button>
+      <button class="orange-btn" style="flex:1;margin:0 0 0 4px;" onclick="navigate('screen-profile-select')">Switch Profiles</button>
+    </div>
+    <div class="bottom-bar"><div class="home-indicator"></div></div>
+  </div>
+
+
+
+  <!-- ══════════════════════════════════════════════════
+       SCREEN: FEATURED LISTING INQUIRY
+  ══════════════════════════════════════════════════ -->
+  <div id="screen-featured" class="screen">
+    <div id="hdr-screen-featured" class="header"></div>
+    <div class="scroll-content" style="padding:0 16px 24px;">
+      <div class="featured-hero">
+        <div class="featured-hero-icon">🌟</div>
+        <div class="featured-hero-title">Get Featured</div>
+        <div class="featured-hero-sub">Featured listings put your business in the spotlight and guarantee maximum visibility.</div>
+      </div>
+      <div class="featured-perks">
+        <div class="featured-perk-row">
+          <div class="featured-perk-icon">🔍</div>
+          <div class="featured-perk-text">Top of the Customer Search screen — the first thing fairgoers see</div>
+        </div>
+        <div class="featured-perk-row">
+          <div class="featured-perk-icon">📅</div>
+          <div class="featured-perk-text">Book one or more days per event — no minimum commitment required</div>
+        </div>
+        <div class="featured-perk-row">
+          <div class="featured-perk-icon">📍</div>
+          <div class="featured-perk-text">Exclusive placement — only one vendor featured per day</div>
+        </div>
+      </div>
+      <div class="featured-note">Pricing varies by event. We'll respond within 24 hours.</div>
+      <div class="form-card">
+        <div class="form-section-title">Your Inquiry</div>
+        <div class="field">
+          <label>Which days are you interested in?</label>
+          <input type="text" placeholder="e.g. Saturday &amp; Sunday">
+          <div class="hint">We'll confirm availability and pricing when we follow up</div>
+        </div>
+        <div class="field" style="margin-bottom:0;">
+          <label>Message <span style="font-size:10px;font-weight:600;color:#bbb;">— optional</span></label>
+          <textarea style="resize:none;height:80px;line-height:1.5;padding:11px 13px;border:1.5px solid #e0e0e0;border-radius:11px;font-size:14px;font-family:Nunito,sans-serif;font-weight:600;color:#333;background:#fafafa;outline:none;" placeholder="Anything else we should know?"></textarea>
+        </div>
+      </div>
+      <button class="orange-btn" onclick="navigate('screen-featured-confirm')">Send Inquiry →</button>
+    </div>
+    <div class="bottom-bar"><div class="home-indicator"></div></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       SCREEN: FEATURED INQUIRY CONFIRMED
+  ══════════════════════════════════════════════════ -->
+  <div id="screen-featured-confirm" class="screen">
+    <div id="hdr-screen-featured-confirm" class="header"></div>
+    <div class="scroll-content" style="padding:40px 24px 24px; display:flex; flex-direction:column; align-items:center; text-align:center;">
+      <div style="font-size:64px; margin-bottom:20px;">🌟</div>
+      <div style="font-size:22px; font-weight:800; color:white; margin-bottom:10px;">Inquiry Sent!</div>
+      <div style="font-size:14px; font-weight:600; color:rgba(255,255,255,0.75); line-height:1.6; margin-bottom:32px;">Thanks for your interest in a Featured listing. We'll review availability for your requested days and get back to you within 24 hours.</div>
+      <div style="background:rgba(255,255,255,0.1); border-radius:16px; padding:16px 20px; width:100%; margin-bottom:28px; text-align:left;">
+        <div style="font-size:11px; font-weight:800; color:rgba(255,255,255,0.5); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;">What happens next</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <div style="font-size:15px;">📬</div>
+            <div style="font-size:13px; font-weight:700; color:rgba(255,255,255,0.85);">We'll email you within 24 hours to confirm availability and pricing</div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <div style="font-size:15px;">💳</div>
+            <div style="font-size:13px; font-weight:700; color:rgba(255,255,255,0.85);">Payment is handled directly — no additional app fees</div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <div style="font-size:15px;">🏠</div>
+            <div style="font-size:13px; font-weight:700; color:rgba(255,255,255,0.85);">Once confirmed, your booth appears on the home screen on your chosen days</div>
+          </div>
+        </div>
+      </div>
+      <button class="orange-btn" style="width:100%;" onclick="navigate('screen-dashboard')">Back to Dashboard</button>
     </div>
     <div class="bottom-bar"><div class="home-indicator"></div></div>
   </div>
@@ -1324,6 +1570,689 @@
   <!-- ══════════════════════════════════════════════════
        SCREEN 12 — MAP VIEW
   ══════════════════════════════════════════════════ -->
+  <!-- NEW SCREENS TO ADD TO PROTOTYPE -->
+<!-- These slot in after screen-vendor-login and replace/update existing vendor screens -->
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: PROFILE SELECTOR
+     Shown after login if user has multiple vendor profiles
+══════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     SCREEN: ACCOUNT LANDING
+     Root screen after account creation / login for new vendors
+══════════════════════════════════════════════════ -->
+<div id="screen-account-landing" class="screen">
+  <div class="header">
+    <div style="width:90px;flex-shrink:0;"></div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="page-title" style="padding-bottom:8px;">
+    <h1>My Account</h1>
+    <p>What would you like to do?</p>
+  </div>
+  <div class="form-scroll" style="flex:1;overflow-y:auto;padding:0 16px 16px;scrollbar-width:none;">
+
+    <!-- Add New Business Profile -->
+    <div class="profile-card add-profile" style="margin-bottom:12px;" onclick="navigate('screen-create-profile')">
+      <div class="profile-card-left">
+        <div class="profile-avatar add-avatar">＋</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name" style="color:#1E3A5F;">Add New Business Profile</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">Set up a business to apply to events</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow" style="color:#1565C0;">›</div>
+    </div>
+
+    <!-- Manage Account -->
+    <div class="profile-card" style="margin-bottom:12px;" onclick="navigate('screen-manage-account')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">⚙️</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Manage Account</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">Email, password, and account settings</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+
+    <!-- Your Businesses — populated selector for existing account -->
+    <div class="profile-card" style="margin-bottom:12px;" onclick="navigate('screen-profile-select')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">🏪</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Your Businesses</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">View and manage your business profiles</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+
+    <!-- Message Support -->
+    <div class="profile-card" style="margin-bottom:24px;" onclick="navigate('screen-support')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">💬</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Message Support</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">Get help from our team</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+
+    <button class="orange-btn" style="width:100%;" onclick="navigate('screen-account-type')">Log Out</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: ACCOUNT LANDING (NEW — no businesses yet)
+══════════════════════════════════════════════════ -->
+<div id="screen-account-landing-new" class="screen">
+  <div class="header">
+    <div style="width:90px;flex-shrink:0;"></div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="page-title" style="padding-bottom:8px;">
+    <h1>My Account</h1>
+    <p>What would you like to do?</p>
+  </div>
+  <div class="form-scroll" style="flex:1;overflow-y:auto;padding:0 16px 16px;scrollbar-width:none;">
+
+    <!-- Add New Business Profile -->
+    <div class="profile-card add-profile" style="margin-bottom:12px;" onclick="navigate('screen-create-profile')">
+      <div class="profile-card-left">
+        <div class="profile-avatar add-avatar">＋</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name" style="color:#1E3A5F;">Add New Business Profile</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">Set up a business to apply to events</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow" style="color:#1565C0;">›</div>
+    </div>
+
+    <!-- Manage Account -->
+    <div class="profile-card" style="margin-bottom:12px;" onclick="navigate('screen-manage-account')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">⚙️</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Manage Account</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">Email, password, and account settings</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+
+    <!-- Your Businesses — empty selector for new account -->
+    <div class="profile-card" style="margin-bottom:12px;" onclick="navigate('screen-profile-select-empty')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">🏪</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Your Businesses</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">View and manage your business profiles</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+
+    <!-- Message Support -->
+    <div class="profile-card" style="margin-bottom:24px;" onclick="navigate('screen-support')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">💬</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Message Support</div>
+          <div class="profile-card-event" style="color:rgba(0,0,0,0.45);">Get help from our team</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+
+    <button class="orange-btn" style="width:100%;" onclick="navigate('screen-account-type')">Log Out</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: SUPPORT
+     Message support form
+══════════════════════════════════════════════════ -->
+<div id="screen-support" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="page-title" style="padding-bottom:8px;">
+    <h1>Message Support</h1>
+    <p>We typically respond within one business day.</p>
+  </div>
+  <div class="form-scroll" style="flex:1;overflow-y:auto;padding:0 16px 16px;scrollbar-width:none;">
+
+    <!-- Hero card -->
+    <div style="background:rgba(255,255,255,0.97);border-radius:16px;padding:18px 16px;margin-bottom:14px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 20px rgba(0,0,0,0.18);">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#1565C0,#42A5F5);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;">💬</div>
+      <div>
+        <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:3px;">We're here to help</div>
+        <div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.5);line-height:1.5;">Send us a message and a member of our team will get back to you as soon as possible.</div>
+      </div>
+    </div>
+
+    <!-- Form card -->
+    <div class="form-card">
+      <div class="form-section-title">Your Message</div>
+      <div class="field-reg">
+        <label>Subject</label>
+        <select>
+          <option value="">Select a topic...</option>
+          <option>Account Help</option>
+          <option>Event Application</option>
+          <option>Billing & Payments</option>
+          <option>Technical Issue</option>
+          <option>Featured Listing</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field-reg">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Describe your issue or question in as much detail as possible..." style="padding:11px 13px;border:1.5px solid #e0e0e0;border-radius:11px;font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;color:#333;background:#fafafa;resize:none;width:100%;box-sizing:border-box;"></textarea>
+      </div>
+      <div class="field-reg">
+        <label>Best email to reach you</label>
+        <input type="email" placeholder="you@yourbusiness.com">
+        <div style="font-size:10px;color:#bbb;font-weight:600;margin-top:4px;">Pre-filled from your account — update if needed</div>
+      </div>
+    </div>
+
+    <button class="blue-btn" style="width:100%;" onclick="navigate('screen-support-confirm')">Send Message →</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: SUPPORT CONFIRMATION
+══════════════════════════════════════════════════ -->
+<div id="screen-support-confirm" class="screen">
+  <div class="header">
+    <div style="width:90px;flex-shrink:0;"></div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;gap:20px;">
+    <div style="width:88px;height:88px;background:linear-gradient(135deg,#1565C0,#42A5F5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:0 4px 20px rgba(21,101,192,0.35);">💬</div>
+    <div style="text-align:center;">
+      <div style="font-size:22px;font-weight:800;color:#1a1a2e;margin-bottom:10px;">Message Sent!</div>
+      <div style="font-size:14px;color:#1a1a2e;line-height:1.6;">Thanks for reaching out. A member of our support team will reply to your email within one business day.</div>
+    </div>
+    <div style="background:#F0F6FF;border:1.5px solid rgba(21,101,192,0.2);border-radius:14px;padding:16px 20px;width:100%;box-sizing:border-box;">
+      <div style="font-size:13px;color:#1565C0;font-weight:700;margin-bottom:6px;">What happens next?</div>
+      <div style="font-size:13px;color:#555;line-height:1.7;">
+        ✅ &nbsp;We review your message<br>
+        ✅ &nbsp;A team member replies by email<br>
+        ✅ &nbsp;Most responses within 1 business day
+      </div>
+    </div>
+    <button class="blue-btn" style="width:100%;margin-top:8px;" onclick="navigate('screen-account-landing')">Back to My Account</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: MANAGE ACCOUNT
+══════════════════════════════════════════════════ -->
+<div id="screen-manage-account" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="page-title" style="padding:0 20px 14px;flex-shrink:0;">
+    <h1>Manage Account</h1>
+    <p>Your login and security settings</p>
+  </div>
+  <div class="scroll-content" style="padding:0 16px 32px;">
+
+    <!-- Email -->
+    <div class="form-card" style="margin-bottom:12px;">
+      <div class="form-section-title">Account Identity</div>
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" value="bob@unclebobsfryer.com" style="background:#f5f5f5;color:#888;">
+        <div class="hint">Contact support to update your email address</div>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-card" style="margin-bottom:12px;">
+      <div class="form-section-title">Security</div>
+      <div class="field">
+        <label>Current Password</label>
+        <input type="password" value="••••••••••">
+      </div>
+      <div class="field">
+        <label>New Password</label>
+        <input type="password" placeholder="Enter new password">
+      </div>
+      <div class="field">
+        <label>Confirm New Password</label>
+        <input type="password" placeholder="Re-enter new password">
+      </div>
+      <button class="blue-btn" style="width:100%;margin-top:4px;">Update Password</button>
+    </div>
+
+    <!-- Danger zone -->
+    <div class="form-card" style="margin-bottom:12px;border:1.5px solid rgba(220,38,38,0.2);">
+      <div class="form-section-title" style="color:#dc2626;">Danger Zone</div>
+      <div style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">Deleting your account is permanent and cannot be undone. All of your business profiles, listings, and event history will be removed.</div>
+      <button class="orange-btn" style="width:100%;margin:0;background:#dc2626;">Delete My Account</button>
+    </div>
+
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<div id="screen-profile-select-empty" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="vl-welcome">
+    <h1>Your Businesses</h1>
+    <p>Add a business profile to get started.</p>
+  </div>
+  <div class="form-scroll">
+    <!-- Add new profile -->
+    <div class="profile-card add-profile" onclick="navigate('screen-create-profile')">
+      <div class="profile-card-left">
+        <div class="profile-avatar add-avatar">＋</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name" style="color:#1E3A5F;">Add New Business Profile</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow" style="color:#1565C0;">›</div>
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.65);text-align:center;padding:8px 16px 4px;line-height:1.6;">
+      Each profile represents one business. Separate profiles allow separate locations, items, and premium subscriptions per event.
+    </div>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: PROFILE SELECTOR (existing account with profiles)
+══════════════════════════════════════════════════ -->
+<div id="screen-profile-select" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="vl-welcome">
+    <h1>Select a Profile</h1>
+    <p>Choose which business you'd like to manage, or add a new one.</p>
+  </div>
+  <div class="form-scroll">
+    <!-- Profile card 1 — active event -->
+    <div class="profile-card" onclick="navigate('screen-dashboard')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">🍟</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Uncle Bob's Fryer Shack</div>
+          <div class="profile-card-event">Fryeburg Fair 2026</div>
+          <div class="profile-card-status premium">⭐ Premium</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+    <!-- Profile card 2 — no active event -->
+    <div class="profile-card" onclick="navigate('screen-dashboard-booth3')">
+      <div class="profile-card-left">
+        <div class="profile-avatar">🧁</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name">Bob's Sweet Corner</div>
+          <div class="profile-card-event">Fryeburg Fair 2026</div>
+          <div class="profile-card-status basic">⏳ Pending Approval</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow">›</div>
+    </div>
+    <!-- Add new profile -->
+    <div class="profile-card add-profile" onclick="navigate('screen-create-profile')">
+      <div class="profile-card-left">
+        <div class="profile-avatar add-avatar">＋</div>
+        <div class="profile-card-info">
+          <div class="profile-card-name" style="color:#1E3A5F;">Add New Business Profile</div>
+        </div>
+      </div>
+      <div class="profile-card-arrow" style="color:#1565C0;">›</div>
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.65);text-align:center;padding:8px 16px 4px;line-height:1.6;">
+      Each profile represents one business. Separate profiles allow separate locations, items, and premium subscriptions per event.
+    </div>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: CREATE NEW PROFILE
+     Lightweight — just business name and category
+══════════════════════════════════════════════════ -->
+<div id="screen-create-profile" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="page-title">
+    <h1>New Business Profile</h1>
+    <p>Set up a new business profile</p>
+  </div>
+  <div class="form-scroll" style="flex:1;overflow-y:auto;padding:0 16px 16px;scrollbar-width:none;">
+    <div class="form-card">
+      <div class="form-section-title">Business Details</div>
+      <div class="field-reg">
+        <label>Business Name</label>
+        <input type="text" placeholder="e.g. Bob's Sweet Corner">
+      </div>
+      <div class="field-reg">
+        <label>Primary Category</label>
+        <select>
+          <option value="">Select a category...</option>
+          <option>Food &amp; Beverage</option>
+          <option>Clothing &amp; Apparel</option>
+          <option>Arts &amp; Crafts</option>
+          <option>Toys &amp; Games</option>
+          <option>Home &amp; Garden</option>
+          <option>Health &amp; Beauty</option>
+          <option>Sports &amp; Outdoors</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field-reg">
+        <label>Short Description</label>
+        <textarea rows="3" placeholder="Describe what your business sells..." style="padding:11px 13px;border:1.5px solid #e0e0e0;border-radius:11px;font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;color:#333;background:#fafafa;resize:none;width:100%;box-sizing:border-box;"></textarea>
+        <div style="font-size:10px;color:#bbb;font-weight:600;margin-top:4px;">Max 250 characters (Basic) · 1000 characters (Premium)</div>
+      </div>
+    </div>
+    <div class="form-card">
+      <div class="form-section-title">Contact Info (Public)</div>
+      <div class="field-reg"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"></div>
+      <div class="field-reg"><label>Public Email</label><input type="email" placeholder="hello@yourbusiness.com">
+        <div style="font-size:10px;color:#bbb;font-weight:600;margin-top:4px;">Shown on your listing — separate from your login email</div>
+      </div>
+      <div class="field-reg"><label>Website (optional)</label><input type="url" placeholder="https://yourbusiness.com"></div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:10px 14px;margin-bottom:10px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:12px;">
+      <span style="font-size:15px;flex-shrink:0;">📸</span>
+      <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);line-height:1.6;">Your primary photo must show the front of your store, truck, or booth. You can add photos after creating your profile.</div>
+    </div>
+    <button class="blue-btn" onclick="navigate('screen-vendor-state')">Create Profile &amp; Apply to an Event →</button>
+    <button class="orange-btn" style="margin-top:-4px;" onclick="navigate('screen-dashboard-booth2')">Save &amp; Apply Later</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: VENDOR STATE SELECTION
+     Filters available events by state before Apply to Event
+══════════════════════════════════════════════════ -->
+<div id="screen-vendor-state" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="state-welcome">
+    <h1>Where's your event?</h1>
+    <p>Select your state to see open events.</p>
+  </div>
+  <div class="state-divider"></div>
+  <div class="section-label">Available States</div>
+  <div class="state-list">
+    <div class="state-item active" onclick="navigate('screen-apply-event')">
+      <div class="state-left">
+        <div class="state-flag">🌲</div>
+        <div><div class="state-name">Maine</div><div class="state-events">2 open events</div></div>
+      </div>
+      <div class="state-chevron">›</div>
+    </div>
+    <div class="state-item inactive-demo" style="opacity:0.4;cursor:default;">
+      <div class="state-left">
+        <div class="state-flag">🦞</div>
+        <div><div class="state-name">Massachusetts</div><div class="state-events">Coming soon</div></div>
+      </div>
+      <div class="state-chevron" style="opacity:0.3;">›</div>
+    </div>
+    <div class="state-item inactive-demo" style="opacity:0.4;cursor:default;">
+      <div class="state-left">
+        <div class="state-flag">🍑</div>
+        <div><div class="state-name">Georgia</div><div class="state-events">Coming soon</div></div>
+      </div>
+      <div class="state-chevron" style="opacity:0.3;">›</div>
+    </div>
+    <div class="state-item inactive-demo" style="opacity:0.4;cursor:default;">
+      <div class="state-left">
+        <div class="state-flag">🌵</div>
+        <div><div class="state-name">Arizona</div><div class="state-events">Coming soon</div></div>
+      </div>
+      <div class="state-chevron" style="opacity:0.3;">›</div>
+    </div>
+    <div class="state-item inactive-demo" style="opacity:0.4;cursor:default;">
+      <div class="state-left">
+        <div class="state-flag">🌻</div>
+        <div><div class="state-name">Kansas</div><div class="state-events">Coming soon</div></div>
+      </div>
+      <div class="state-chevron" style="opacity:0.3;">›</div>
+    </div>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: APPLY TO EVENT
+     Shows Admin-published open events
+══════════════════════════════════════════════════ -->
+<div id="screen-apply-event" class="screen">
+  <div class="header">
+    <div class="back-btn" onclick="goBack()">‹ Back</div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div class="vl-welcome">
+    <h1>Apply to an Event</h1>
+    <p>Select an open event to submit your application. Admin approval required.</p>
+  </div>
+  <div class="form-scroll">
+    <!-- Open event card -->
+    <div class="event-apply-card" onclick="navigate('screen-apply-confirm')">
+      <div class="event-apply-top">
+        <div class="event-apply-badge open">Open</div>
+        <div class="event-apply-deadline">Apply by Sep 15, 2026</div>
+      </div>
+      <div class="event-apply-name">Fryeburg Fair 2026</div>
+      <div class="event-apply-meta">📍 Fryeburg, ME &nbsp;·&nbsp; 🗓️ Oct 3 – 11, 2026</div>
+      <div class="event-apply-desc">New England's largest agricultural fair. 10-day event with 100,000+ attendees across food, crafts, entertainment, and livestock.</div>
+      <div class="event-apply-footer">
+        <div class="event-apply-fee">Premium: $9.99 &nbsp;·&nbsp; Basic: Free</div>
+        <div class="event-apply-cta">Apply →</div>
+      </div>
+    </div>
+    <!-- Upcoming event card (not yet open) -->
+    <div class="event-apply-card upcoming">
+      <div class="event-apply-top">
+        <div class="event-apply-badge upcoming-badge">Coming Soon</div>
+        <div class="event-apply-deadline">Opens Aug 1, 2026</div>
+      </div>
+      <div class="event-apply-name">Harmony Springs Fair 2026</div>
+      <div class="event-apply-meta">📍 Gorham, ME &nbsp;·&nbsp; 🗓️ Nov 14 – 16, 2026</div>
+      <div class="event-apply-desc">Annual autumn fair featuring local artisans, food vendors, and live music in Southern Maine.</div>
+      <div class="event-apply-footer">
+        <div class="event-apply-fee">Premium: $9.99 &nbsp;·&nbsp; Basic: Free</div>
+        <div class="event-apply-cta" style="color:#aaa;">Not Yet Open</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.65);text-align:center;padding:8px 16px 4px;line-height:1.6;">
+      Don't see your event? It may not be published yet. Check back soon or contact the event Admin.
+    </div>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: APPLICATION SUBMITTED
+══════════════════════════════════════════════════ -->
+<div id="screen-apply-confirm" class="screen">
+  <div class="header">
+    <div style="width:90px;flex-shrink:0;"></div>
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div style="width:90px;flex-shrink:0;"></div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;gap:20px;">
+    <div style="width:88px;height:88px;background:linear-gradient(135deg,#1565C0,#42A5F5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:0 4px 20px rgba(21,101,192,0.35);">🎪</div>
+    <div style="text-align:center;">
+      <div style="font-size:22px;font-weight:800;color:#1a1a2e;margin-bottom:10px;">Application Submitted!</div>
+      <div style="font-size:14px;color:#1a1a2e;line-height:1.6;">Your application to <strong>Fryeburg Fair 2026</strong> has been sent. The event Admin will review it and you'll receive an email once a decision has been made.</div>
+    </div>
+    <div style="background:#F0F6FF;border:1.5px solid rgba(21,101,192,0.2);border-radius:14px;padding:16px 20px;width:100%;box-sizing:border-box;">
+      <div style="font-size:13px;color:#1565C0;font-weight:700;margin-bottom:6px;">What happens next?</div>
+      <div style="font-size:13px;color:#555;line-height:1.7;">
+        ✅ &nbsp;Admin reviews your event application<br>
+        ✅ &nbsp;You'll receive an email with the decision<br>
+        ✅ &nbsp;Once approved, pin your location on the map<br>
+        ✅ &nbsp;Optionally upgrade to Premium
+      </div>
+    </div>
+    <button class="blue-btn" style="width:100%;margin-top:8px;" onclick="navigate('screen-dashboard-booth3')">Go to My Dashboard</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SCREEN: DASHBOARD — BOOTH 2 (no active event)
+     Shows what dashboard looks like before event approval
+══════════════════════════════════════════════════ -->
+<div id="screen-dashboard-booth2" class="screen">
+  <div class="dash-header">
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div class="notif-btn" onclick="navigate('screen-notifications')">🔔 Notifications <div class="notif-badge" style="display:none;"></div></div>
+  </div>
+  <div class="greeting">
+    <div class="greeting-name" style="font-size:20px;opacity:0.6;font-style:italic;">New Business Profile</div>
+    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 12px;cursor:pointer;" onclick="navigate('screen-create-profile')"><div style="font-size:11px;font-weight:800;color:white;letter-spacing:0.5px;">✏️ Complete Your Business Profile</div></div>
+  </div>
+  <div class="scroll-content" style="padding:0 16px 16px;">
+
+    <!-- No active event notice -->
+    <!-- 2×3 Menu Grid -->
+    <div class="menu-grid">
+        <div class="menu-item" onclick="navigate('screen-manage-profile')">
+          <div class="menu-item-icon">👤</div>
+          <div class="menu-item-title">Manage Business</div>
+          <div class="menu-item-sub">Name, description, contact</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-update-password')">
+          <div class="menu-item-icon">🔒</div>
+          <div class="menu-item-title">Update Password</div>
+          <div class="menu-item-sub">Change your password</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-vendor-state')">
+          <div class="menu-item-icon">🎪</div>
+          <div class="menu-item-title">Apply to Event</div>
+          <div class="menu-item-sub">Browse open events</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-manage-location')">
+          <div class="menu-item-icon">📍</div>
+          <div class="menu-item-title">Manage Location</div>
+          <div class="menu-item-sub">Pin your spot on the map</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-manage-photos')">
+          <div class="menu-item-icon">📷</div>
+          <div class="menu-item-title">Manage Photos</div>
+          <div class="menu-item-sub">0 photos uploaded</div>
+        </div>
+        <div class="menu-item" onclick="navigate('screen-manage-items')">
+          <div class="menu-item-icon">🍽️</div>
+          <div class="menu-item-title">Manage Items</div>
+          <div class="menu-item-sub">0 items added</div>
+        </div>
+    </div>
+    <div style="height:70px;"></div><!-- spacer for fixed footer -->
+  </div>
+  <!-- Fixed footer -->
+  <div class="dash-fixed-footer">
+    <button class="blue-btn" style="flex:1;" onclick="navigate('screen-account-landing-new')">My Account</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div><!-- ══════════════════════════════════════════════════
+     SCREEN: DASHBOARD — BOOTH 3 (completed profile, application pending)
+══════════════════════════════════════════════════ -->
+<div id="screen-dashboard-booth3" class="screen">
+  <div class="dash-header">
+    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
+    <div class="notif-btn" onclick="navigate('screen-notifications')">🔔 Notifications <div class="notif-badge"></div></div>
+  </div>
+  <div class="greeting">
+    <div class="greeting-name">Bob's Sweet Corner</div>
+    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(249,115,22,0.18);border:1px solid rgba(249,115,22,0.4);border-radius:20px;padding:4px 12px;">
+      <div style="font-size:11px;font-weight:800;color:#FFE0B2;letter-spacing:0.5px;">⏳ Event Application Pending</div>
+    </div>
+  </div>
+  <div class="scroll-content" style="padding:0 16px 16px;">
+
+    <!-- Status card — pending approval, no upgrade option -->
+    <div style="background:rgba(255,255,255,0.97);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 4px 20px rgba(0,0,0,0.18);">
+      <div style="font-size:11px;font-weight:800;color:#1565C0;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Current Listing · Fryeburg Fair 2026</div>
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:4px;">Basic · Pending Approval</div>
+      <div style="font-size:13px;color:#888;line-height:1.5;">Upgrade options will be available once your event application has been approved.</div>
+    </div>
+
+    <!-- 2×3 Menu Grid -->
+    <div class="menu-grid">
+      <div class="menu-item" onclick="navigate('screen-manage-profile')">
+        <div class="menu-item-icon">👤</div>
+        <div class="menu-item-title">Manage Business</div>
+        <div class="menu-item-sub">Name, description, contact</div>
+      </div>
+      <div class="menu-item" onclick="navigate('screen-update-password')">
+        <div class="menu-item-icon">🔒</div>
+        <div class="menu-item-title">Update Password</div>
+        <div class="menu-item-sub">Change your password</div>
+      </div>
+      <div class="menu-item" onclick="navigate('screen-vendor-state')">
+        <div class="menu-item-icon">🎪</div>
+        <div class="menu-item-title">Apply to Event</div>
+        <div class="menu-item-sub">Browse open events</div>
+      </div>
+      <div class="menu-item" onclick="navigate('screen-manage-location')">
+        <div class="menu-item-icon">📍</div>
+        <div class="menu-item-title">Manage Location</div>
+        <div class="menu-item-sub">Pin your spot on the map</div>
+      </div>
+      <div class="menu-item" onclick="navigate('screen-manage-photos')">
+        <div class="menu-item-icon">📷</div>
+        <div class="menu-item-title">Manage Photos</div>
+        <div class="menu-item-sub">2 photos uploaded</div>
+      </div>
+      <div class="menu-item" onclick="navigate('screen-manage-items')">
+        <div class="menu-item-icon">🍽️</div>
+        <div class="menu-item-title">Manage Items</div>
+        <div class="menu-item-sub">3 items added</div>
+      </div>
+    </div>
+    <div style="height:70px;"></div>
+  </div>
+  <!-- Fixed footer -->
+  <div class="dash-fixed-footer">
+    <button class="blue-btn" style="flex:1;margin:0 4px 0 0;" onclick="navigate('screen-account-landing')">My Account</button>
+    <button class="orange-btn" style="flex:1;margin:0 0 0 4px;" onclick="navigate('screen-profile-select')">Switch Profiles</button>
+  </div>
+  <div class="bottom-bar"><div class="home-indicator"></div></div>
+</div>
+
+
   <div id="screen-map" class="screen" style="background:#1a1a2e;">
     <div class="map-container" id="map-container">
       <img class="map-img" id="map-img" src="https://raw.githubusercontent.com/FairFriendApp/Images/7a5e4677f67216424f817bc808c49221a5db8c91/Sat-Map.png" alt="Satellite Map">
@@ -1701,7 +2630,7 @@
         <div class="feature-row prem-only"><span style="font-size:14px;">✓</span> Item descriptions (50 chars)</div>
         <div class="feature-row prem-only"><span style="font-size:14px;">✓</span> Priority placement in search</div>
       </div>
-      <button class="upgrade-plan-btn">⭐ Upgrade to Premium — $9.99</button>
+      <button class="upgrade-plan-btn" onclick="window.open('https://stripe.com','_blank')">⭐ Upgrade to Premium — $9.99</button>
       <div class="stripe-note">🔒 Payments securely processed by Stripe</div>
     </div>
     <div class="bottom-bar"><div class="home-indicator"></div></div>
@@ -2647,7 +3576,7 @@
   }
 
   function renderAppHeaders() {
-    const goBackScreens = ['screen-results','screen-vendor-detail','screen-categories','screen-items'];
+    const goBackScreens = ['screen-results','screen-vendor-detail','screen-categories','screen-items','screen-featured','screen-featured-confirm'];
     goBackScreens.forEach(sid => {
       const el = document.getElementById('hdr-' + sid);
       if (el) el.innerHTML = appHeaderHTML('goBack()');
