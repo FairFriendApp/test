@@ -1331,7 +1331,7 @@
           <div class="menu-item-title">Update Password</div>
           <div class="menu-item-sub">Change your password</div>
         </div>
-        <div class="menu-item" onclick="navigate('screen-vendor-state')">
+        <div class="menu-item" onclick="cancelDest='screen-account-landing'; navigate('screen-vendor-state')">
           <div class="menu-item-icon">🎪</div>
           <div class="menu-item-title">Apply to Event</div>
           <div class="menu-item-sub">Browse open events</div>
@@ -2082,8 +2082,8 @@
       <span style="font-size:15px;flex-shrink:0;">📸</span>
       <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);line-height:1.6;">Your primary photo must show the front of your store, truck, or booth. You can add photos after creating your profile.</div>
     </div>
-    <button class="blue-btn" onclick="navigate('screen-vendor-state')">Create Profile &amp; Apply to an Event →</button>
-    <button class="orange-btn" style="margin-top:-4px;" onclick="navigate('screen-dashboard-booth2')">Save &amp; Apply Later</button>
+    <button class="blue-btn" onclick="cancelDest='screen-account-landing-new'; navigate('screen-vendor-state')">Create Profile &amp; Apply to an Event →</button>
+    <button class="orange-btn" style="margin-top:-4px;background:transparent;border:1.5px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.8);" onclick="navigate('screen-account-landing-new')">Cancel</button>
   </div>
   <div class="bottom-bar"><div class="home-indicator"></div></div>
 </div>
@@ -2141,6 +2141,9 @@
       <div class="state-chevron" style="opacity:0.3;">›</div>
     </div>
   </div>
+  <div style="padding:0 16px 16px;">
+    <button style="width:100%;padding:13px;background:transparent;border:1.5px solid rgba(255,255,255,0.4);border-radius:14px;color:rgba(255,255,255,0.8);font-size:14px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;" onclick="navigate(cancelDest)">Cancel</button>
+  </div>
   <div class="bottom-bar"><div class="home-indicator"></div></div>
 </div>
 
@@ -2190,6 +2193,9 @@
     <div style="font-size:12px;color:rgba(255,255,255,0.65);text-align:center;padding:8px 16px 4px;line-height:1.6;">
       Don't see your event? It may not be published yet. Check back soon or contact the event Admin.
     </div>
+    <div style="padding:8px 16px 16px;">
+      <button style="width:100%;padding:13px;background:transparent;border:1.5px solid rgba(255,255,255,0.4);border-radius:14px;color:rgba(255,255,255,0.8);font-size:14px;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer;" onclick="navigate(cancelDest)">Cancel</button>
+    </div>
   </div>
   <div class="bottom-bar"><div class="home-indicator"></div></div>
 </div>
@@ -2227,59 +2233,11 @@
      SCREEN: DASHBOARD — BOOTH 2 (no active event)
      Shows what dashboard looks like before event approval
 ══════════════════════════════════════════════════ -->
-<div id="screen-dashboard-booth2" class="screen">
-  <div class="dash-header">
-    <img class="header-logo" src="https://raw.githubusercontent.com/FairFriendApp/Images/main/FF_Logo_With_Transparency.png" alt="Fair Friend">
-    <div class="notif-btn" onclick="navigate('screen-notifications')">🔔 Notifications <div class="notif-badge" style="display:none;"></div></div>
-  </div>
-  <div class="greeting">
-    <div class="greeting-name" style="font-size:20px;opacity:0.6;font-style:italic;">New Business Profile</div>
-    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 12px;cursor:pointer;" onclick="navigate('screen-create-profile')"><div style="font-size:11px;font-weight:800;color:white;letter-spacing:0.5px;">✏️ Complete Your Business Profile</div></div>
-  </div>
-  <div class="scroll-content" style="padding:0 16px 16px;">
-
-    <!-- No active event notice -->
-    <!-- 2×3 Menu Grid -->
-    <div class="menu-grid">
-        <div class="menu-item" onclick="navigate('screen-manage-profile')">
-          <div class="menu-item-icon">👤</div>
-          <div class="menu-item-title">Manage Business</div>
-          <div class="menu-item-sub">Name, description, contact</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-update-password')">
-          <div class="menu-item-icon">🔒</div>
-          <div class="menu-item-title">Update Password</div>
-          <div class="menu-item-sub">Change your password</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-vendor-state')">
-          <div class="menu-item-icon">🎪</div>
-          <div class="menu-item-title">Apply to Event</div>
-          <div class="menu-item-sub">Browse open events</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-manage-location')">
-          <div class="menu-item-icon">📍</div>
-          <div class="menu-item-title">Manage Location</div>
-          <div class="menu-item-sub">Pin your spot on the map</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-manage-photos')">
-          <div class="menu-item-icon">📷</div>
-          <div class="menu-item-title">Manage Photos</div>
-          <div class="menu-item-sub">0 photos uploaded</div>
-        </div>
-        <div class="menu-item" onclick="navigate('screen-manage-items')">
-          <div class="menu-item-icon">🍽️</div>
-          <div class="menu-item-title">Manage Items</div>
-          <div class="menu-item-sub">0 items added</div>
-        </div>
-    </div>
-    <div style="height:70px;"></div><!-- spacer for fixed footer -->
-  </div>
-  <!-- Fixed footer -->
-  <div class="dash-fixed-footer">
-    <button class="blue-btn" style="flex:1;" onclick="navigate('screen-account-landing-new')">My Account</button>
-  </div>
-  <div class="bottom-bar"><div class="home-indicator"></div></div>
-</div><!-- ══════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════
+     SCREEN: DASHBOARD — REJECTED STATE
+     Business profile application was rejected
+══════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
      SCREEN: DASHBOARD — BOOTH 3 (completed profile, application pending)
 ══════════════════════════════════════════════════ -->
 <div id="screen-dashboard-booth3" class="screen">
@@ -2314,7 +2272,7 @@
         <div class="menu-item-title">Update Password</div>
         <div class="menu-item-sub">Change your password</div>
       </div>
-      <div class="menu-item" onclick="navigate('screen-vendor-state')">
+      <div class="menu-item" onclick="cancelDest='screen-account-landing'; navigate('screen-vendor-state')">
         <div class="menu-item-icon">🎪</div>
         <div class="menu-item-title">Apply to Event</div>
         <div class="menu-item-sub">Browse open events</div>
@@ -2324,15 +2282,15 @@
         <div class="menu-item-title">Manage Location</div>
         <div class="menu-item-sub">Pin your spot on the map</div>
       </div>
-      <div class="menu-item" onclick="navigate('screen-manage-photos')">
-        <div class="menu-item-icon">📷</div>
-        <div class="menu-item-title">Manage Photos</div>
-        <div class="menu-item-sub">2 photos uploaded</div>
+      <div class="menu-item" style="background:rgba(255,255,255,0.45);cursor:default;">
+        <div class="menu-item-icon">🔐</div>
+        <div class="menu-item-title" style="color:#aaa;">Manage Photos</div>
+        <div class="menu-item-sub" style="color:#ccc;">Available after approval</div>
       </div>
-      <div class="menu-item" onclick="navigate('screen-manage-items')">
-        <div class="menu-item-icon">🍽️</div>
-        <div class="menu-item-title">Manage Items</div>
-        <div class="menu-item-sub">3 items added</div>
+      <div class="menu-item" style="background:rgba(255,255,255,0.45);cursor:default;">
+        <div class="menu-item-icon">🔐</div>
+        <div class="menu-item-title" style="color:#aaa;">Manage Items</div>
+        <div class="menu-item-sub" style="color:#ccc;">Available after approval</div>
       </div>
     </div>
     <div style="height:70px;"></div>
@@ -3418,6 +3376,7 @@
   // ═══════════════════════════════════════════
   const navStack = ['screen-splash'];
   let current = 'screen-splash';
+  let cancelDest = 'screen-account-landing-new'; // default for new vendor flow
 
   function navigate(targetId) {
     if (targetId === current) return;
