@@ -100,7 +100,7 @@
   }
   .header-right { width: 90px; flex-shrink: 0; box-sizing: border-box; display:flex; justify-content:flex-end; align-items:center; }
   .header-spacer { width: 90px; flex-shrink: 0; }
-  .event-pill   { width: 90px !important; flex-shrink: 0 !important; box-sizing: border-box; }
+  .event-pill   { width: 90px !important; flex-shrink: 0 !important; box-sizing: border-box; max-height: 67px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
   .scroll-content {
     flex: 1;
     overflow-y: auto;
@@ -475,7 +475,7 @@
     min-height: 64px;
   }
   .event-pill { display:flex; flex-direction:column; align-items:flex-end; }
-  .event-pill-name { font-size:13px; font-weight:800; color:#fff; text-align:right; }
+  .event-pill-name { font-size:13px; font-weight:800; color:#fff; text-align:right; line-height:1.25; }
   .event-pill-date { font-size:11px; font-weight:600; color:rgba(255,255,255,0.75); text-align:right; }
   .featured-section { margin:0 16px 12px; flex-shrink:0; }
   .featured-label { font-size:11px; font-weight:800; color:#FFE066; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px; display:flex; align-items:center; gap:5px; }
