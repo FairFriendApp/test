@@ -350,7 +350,7 @@
   .or-divider { display:flex; align-items:center; gap:10px; margin:14px 0; }
   .or-line { flex:1; height:1px; background:#eee; }
   .or-text  { font-size:12px; font-weight:700; color:#bbb; }
-  .register-btn { width:100%; padding:15px; background:#F97316; color:white; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:14px; cursor:pointer; text-align:center; box-shadow:0 6px 20px rgba(249,115,22,0.35); margin-bottom:14px; }
+  .register-btn { width:100%; padding:15px; background:#F599CA; color:white; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:14px; cursor:pointer; text-align:center; box-shadow:0 6px 20px rgba(245,153,202,0.35); margin-bottom:14px; text-shadow:0 1px 3px rgba(120,0,60,0.55); }
   .status-card { background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); border-radius:14px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; margin-bottom:14px; }
   .status-icon { font-size:22px; flex-shrink:0; }
   .status-title { font-size:13px; font-weight:800; color:#fff; margin-bottom:3px; }
@@ -378,9 +378,9 @@
   .terms-checkbox { width:18px; height:18px; border:2px solid #1565C0; border-radius:4px; flex-shrink:0; margin-top:1px; display:flex; align-items:center; justify-content:center; background:#1565C0; color:white; font-size:12px; }
   .terms-text { font-size:11px; font-weight:600; color:#555; line-height:1.5; }
   .terms-text a { color:#1565C0; text-decoration:underline; }
-  .photo-notice { background:#F97316; border:none; border-radius:10px; padding:10px 12px; margin-bottom:10px; display:flex; gap:8px; align-items:flex-start; box-shadow:0 4px 12px rgba(249,115,22,0.3); }
+  .photo-notice { background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); border-radius:10px; padding:10px 12px; margin-bottom:10px; display:flex; gap:8px; align-items:flex-start; }
   .photo-notice-text { font-size:11px; font-weight:700; color:#fff; line-height:1.5; }
-  .lock-notice-reg { background:#F97316; border:none; border-radius:10px; padding:10px 12px; margin-bottom:10px; display:flex; gap:8px; align-items:flex-start; box-shadow:0 4px 12px rgba(234,88,12,0.3); }
+  .lock-notice-reg { background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); border-radius:10px; padding:10px 12px; margin-bottom:10px; display:flex; gap:8px; align-items:flex-start; }
   .lock-notice-reg-text { font-size:11px; font-weight:700; color:#fff; line-height:1.5; }
   .login-link { text-align:center; font-size:12px; font-weight:600; color:rgba(255,255,255,0.85); padding-bottom:8px; }
   .login-link a { color:#FFE066; font-weight:800; text-decoration:none; cursor:pointer; }
@@ -583,7 +583,7 @@
   .contact-chip-text { display:none; }
   .vd-disclaimer { margin:8px 16px 0; padding:8px 14px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); border-radius:10px; font-size:10px; font-weight:600; color:rgba(255,255,255,0.7); text-align:center; line-height:1.4; }
   .floating-btn-wrap { position:absolute; bottom:30px; left:16px; right:16px; z-index:20; }
-  .floating-btn { width:100%; padding:15px; background:#F97316; color:white; font-size:16px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:16px; cursor:pointer; text-align:center; box-shadow:0 6px 24px rgba(249,115,22,0.5); }
+  .floating-btn { width:100%; padding:15px; background:#F599CA; color:white; font-size:16px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:16px; cursor:pointer; text-align:center; box-shadow:0 6px 24px rgba(245,153,202,0.45); text-shadow:0 1px 3px rgba(120,0,60,0.55); }
 
   /* ============================================================
      SCREEN 12 — MAP VIEW
@@ -651,7 +651,7 @@
   .item-btn { width:32px; height:32px; border-radius:8px; border:none; cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center; }
   .item-btn.edit   { background:#EEF4FF; color:#1565C0; }
   .item-btn.delete { background:#FFF0F0; color:#E8231A; }
-  .add-item-btn { width:100%; padding:14px; background:#1565C0; color:white; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:14px; cursor:pointer; text-align:center; box-shadow:0 4px 16px rgba(21,101,192,0.3); margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:8px; }
+  .add-item-btn { width:100%; padding:14px; background:#38B2F5; color:white; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:14px; cursor:pointer; text-align:center; box-shadow:0 4px 16px rgba(56,178,245,0.35); margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:8px; text-shadow:0 1px 3px rgba(0,60,120,0.55); }
 
   /* ============================================================
      SCREEN 15 — ADD / EDIT ITEM (Premium)
@@ -689,8 +689,8 @@
   .pin-info-label { font-size:10px; font-weight:800; color:#aaa; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:2px; }
   .pin-info-value { font-size:13px; font-weight:800; color:#1a1a2e; }
   .pin-info-coords { font-size:10px; font-weight:600; color:#aaa; margin-top:1px; }
-  .repin-btn { background:#1565C0; color:white; font-size:11px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:10px; padding:8px 12px; cursor:pointer; white-space:nowrap; }
-  .confirm-btn { width:100%; padding:14px; background:#F97316; color:white; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:14px; cursor:pointer; box-shadow:0 6px 20px rgba(249,115,22,0.35); margin-bottom:8px; }
+  .repin-btn { background:#38B2F5; color:white; font-size:11px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:10px; padding:8px 12px; cursor:pointer; white-space:nowrap; text-shadow:0 1px 3px rgba(0,60,120,0.55); }
+  .confirm-btn { width:100%; padding:14px; background:#F599CA; color:white; font-size:15px; font-weight:800; font-family:'Nunito',sans-serif; border:none; border-radius:14px; cursor:pointer; box-shadow:0 6px 20px rgba(245,153,202,0.35); margin-bottom:8px; text-shadow:0 1px 3px rgba(120,0,60,0.55); }
   .loc-notice { text-align:center; font-size:10px; font-weight:600; color:rgba(255,255,255,0.65); line-height:1.5; }
 
   /* ============================================================
@@ -2745,10 +2745,10 @@
         <div style="padding:14px 16px 18px;">
           <div id="hungry-vendor-name" style="font-size:18px;font-weight:900;color:#1565C0;margin-bottom:5px;"></div>
           <div id="hungry-vendor-desc" style="font-size:12px;font-weight:600;color:#666;line-height:1.5;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"></div>
-          <button id="hungry-view-btn" style="width:100%;padding:13px;background:#1565C0;color:white;font-size:15px;font-weight:800;font-family:Nunito,sans-serif;border:none;border-radius:14px;cursor:pointer;box-shadow:0 4px 16px rgba(21,101,192,0.45);">View This Vendor</button>
+          <button id="hungry-view-btn" style="width:100%;padding:13px;background:#38B2F5;color:white;font-size:15px;font-weight:800;font-family:Nunito,sans-serif;border:none;border-radius:14px;cursor:pointer;box-shadow:0 4px 16px rgba(56,178,245,0.45);text-shadow:0 1px 3px rgba(0,60,120,0.55);">View This Vendor</button>
         </div>
       </div>
-      <button onclick="imHungry()" style="margin-top:12px;width:100%;padding:13px;background:rgba(255,255,255,0.18);border:1.5px solid rgba(255,255,255,0.4);color:white;font-size:15px;font-weight:800;font-family:Nunito,sans-serif;border-radius:14px;cursor:pointer;backdrop-filter:blur(8px);flex-shrink:0;">🎲 Try Again</button>
+      <button onclick="imHungry()" style="margin-top:12px;width:100%;padding:13px;background:#F599CA;border:none;color:white;font-size:15px;font-weight:800;font-family:Nunito,sans-serif;border-radius:14px;cursor:pointer;flex-shrink:0;box-shadow:0 4px 16px rgba(245,153,202,0.35);text-shadow:0 1px 3px rgba(120,0,60,0.55);">🎲 Try Again</button>
     </div>
     <div class="bottom-bar"><div class="home-indicator"></div></div>
   </div>
