@@ -1617,7 +1617,7 @@
       <button id="sort-btn-default" class="sort-btn active" onclick="sortResults('distance')">📍 Nearest First</button>
       <button id="sort-btn-price"   class="sort-btn inactive" onclick="sortResults('price')">💲 Lowest Price</button>
     </div>
-    <div class="results-section-label">⭐ Premium Vendors Displayed First</div>
+    <div id="results-premium-label" class="results-section-label">⭐ Premium Vendors Displayed First</div>
     <div class="results-list">
       <div id="results-list-inner"></div>
     </div>
@@ -1625,7 +1625,7 @@
       <button onclick="navigate('screen-home')" style="width:100%;padding:15px;background:#38B2F5;color:white;font-size:16px;font-weight:800;font-family:'Nunito',sans-serif;border:none;border-radius:14px;cursor:pointer;box-shadow:0 6px 20px rgba(56,178,245,0.35);text-shadow:0 1px 3px rgba(0,60,120,0.55);">🔍 Search Again</button>
       <button onclick="openCategories()" style="width:100%;padding:15px;background:#F599CA;color:white;font-size:16px;font-weight:800;font-family:'Nunito',sans-serif;border:none;border-radius:14px;cursor:pointer;box-shadow:0 6px 20px rgba(245,153,202,0.35);text-shadow:0 1px 3px rgba(120,0,60,0.55);">🗂️ Browse by Category</button>
     </div>
-    <div class="results-disclaimer">Prices displayed are set by vendors. Fair Friend is not responsible for pricing discrepancies between the app and the vendor's booth.</div>
+    <div id="results-disclaimer" class="results-disclaimer">Prices displayed are set by vendors. Fair Friend is not responsible for pricing discrepancies between the app and the vendor's booth.</div>
     <div class="bottom-bar"><div class="home-indicator"></div></div>
   </div>
 
@@ -3392,6 +3392,10 @@
     if (current === 'screen-results') {
       const nra = document.getElementById('no-results-actions');
       if (nra) nra.style.display = 'none';
+      const pl = document.getElementById('results-premium-label');
+      if (pl) pl.style.display = '';
+      const rd = document.getElementById('results-disclaimer');
+      if (rd) rd.style.display = '';
     }
     navStack.push(targetId);
     from.classList.remove('active','entering');
@@ -3618,8 +3622,13 @@
         </div>
       </div>`;
     }).join('') || `<div style="text-align:center;color:rgba(255,255,255,0.85);padding:40px 20px 24px;font-weight:700;">No results found.<br><span style="font-size:13px;opacity:0.7;font-weight:600;">Try a different search term.</span></div>`;
+    const hasResults = sorted.length > 0;
     const noResultsActions = document.getElementById('no-results-actions');
-    if (noResultsActions) noResultsActions.style.display = sorted.length === 0 ? 'flex' : 'none';
+    const premiumLabel = document.getElementById('results-premium-label');
+    const disclaimer = document.getElementById('results-disclaimer');
+    if (noResultsActions) noResultsActions.style.display = hasResults ? 'none' : 'flex';
+    if (premiumLabel) premiumLabel.style.display = hasResults ? '' : 'none';
+    if (disclaimer) disclaimer.style.display = hasResults ? '' : 'none';
   }
 
   // ─── Strip leading emoji from item names for display ───────────────────────
