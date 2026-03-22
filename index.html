@@ -3608,7 +3608,7 @@
           </div>
         </div>
       </div>`;
-    }).join('') || `<div style="text-align:center;color:rgba(255,255,255,0.7);padding:40px 20px;font-weight:700;">No results found.<br><span style="font-size:13px;opacity:0.7;">Try a different search term.</span></div>`;
+    }).join('') || `<div style="text-align:center;color:rgba(255,255,255,0.85);padding:40px 20px 24px;font-weight:700;">No results found.<br><span style="font-size:13px;opacity:0.7;font-weight:600;">Try a different search term.</span></div><div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:10px;"><button onclick="navigate('screen-home')" style="width:100%;padding:15px;background:#38B2F5;color:white;font-size:16px;font-weight:800;font-family:'Nunito',sans-serif;border:none;border-radius:14px;cursor:pointer;box-shadow:0 6px 20px rgba(56,178,245,0.35);text-shadow:0 1px 3px rgba(0,60,120,0.55);">🔍 Search Again</button><button onclick="openCategories()" style="width:100%;padding:15px;background:#F599CA;color:white;font-size:16px;font-weight:800;font-family:'Nunito',sans-serif;border:none;border-radius:14px;cursor:pointer;box-shadow:0 6px 20px rgba(245,153,202,0.35);text-shadow:0 1px 3px rgba(120,0,60,0.55);">🗂️ Browse by Category</button></div>`;
   }
 
   // ─── Strip leading emoji from item names for display ───────────────────────
